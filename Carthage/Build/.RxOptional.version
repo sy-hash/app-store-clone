@@ -1,0 +1,9 @@
+{
+  "commitish" : "3.3.0",
+  "iOS" : [
+    {
+      "name" : "RxOptional",
+      "hash" : "f4ef0fc4dd556e53058415258b89e333ae5a90359069a38a4b3d9ed88276907a"
+    }
+  ]
+}

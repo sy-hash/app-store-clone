@@ -1,2 +1,8 @@
 
 xcuserdata
+
+Carthage/Checkouts
+Carthage/Build/watchOS
+Carthage/Build/tvOS
+Carthage/Build/Mac
+!Carthage/Build/iOS
