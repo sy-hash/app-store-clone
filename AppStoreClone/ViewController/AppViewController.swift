@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  AppViewController.swift
 //  AppStoreClone
 //
 //  Created by s-hashimoto on 2018/02/26.
@@ -8,11 +8,19 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class AppViewController: UIViewController {
 
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        view.backgroundColor = UIColor.white
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {

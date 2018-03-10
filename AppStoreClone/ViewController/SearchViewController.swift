@@ -1,18 +1,19 @@
 //
-//  SecondViewController.swift
+//  SearchViewController.swift
 //  AppStoreClone
 //
-//  Created by s-hashimoto on 2018/02/26.
+//  Created by s-hashimoto on 2018/03/11.
 //  Copyright © 2018年 sy-hash. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +21,4 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

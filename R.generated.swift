@@ -31,12 +31,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 7 images.
   struct image {
     /// Image `first`.
     static let first = Rswift.ImageResource(bundle: R.hostingBundle, name: "first")
     /// Image `second`.
     static let second = Rswift.ImageResource(bundle: R.hostingBundle, name: "second")
+    /// Image `tab_icon_apps`.
+    static let tab_icon_apps = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_icon_apps")
+    /// Image `tab_icon_games`.
+    static let tab_icon_games = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_icon_games")
+    /// Image `tab_icon_search`.
+    static let tab_icon_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_icon_search")
+    /// Image `tab_icon_today`.
+    static let tab_icon_today = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_icon_today")
+    /// Image `tab_icon_update`.
+    static let tab_icon_update = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_icon_update")
     
     /// `UIImage(named: "first", bundle: ..., traitCollection: ...)`
     static func first(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -46,6 +56,31 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "second", bundle: ..., traitCollection: ...)`
     static func second(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.second, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tab_icon_apps", bundle: ..., traitCollection: ...)`
+    static func tab_icon_apps(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_icon_apps, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tab_icon_games", bundle: ..., traitCollection: ...)`
+    static func tab_icon_games(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_icon_games, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tab_icon_search", bundle: ..., traitCollection: ...)`
+    static func tab_icon_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_icon_search, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tab_icon_today", bundle: ..., traitCollection: ...)`
+    static func tab_icon_today(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_icon_today, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "tab_icon_update", bundle: ..., traitCollection: ...)`
+    static func tab_icon_update(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_icon_update, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -66,21 +101,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     
     fileprivate init() {}
@@ -93,7 +121,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      try _R.validate()
+      // There are no resources to validate
     }
     
     fileprivate init() {}
@@ -104,39 +132,17 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R: Rswift.Validatable {
-  static func validate() throws {
-    try storyboard.validate()
-  }
-  
+struct _R {
   struct nib {
     fileprivate init() {}
   }
   
-  struct storyboard: Rswift.Validatable {
-    static func validate() throws {
-      try main.validate()
-    }
-    
+  struct storyboard {
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UIViewController
       
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
-      
-      fileprivate init() {}
-    }
-    
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UITabBarController
-      
-      let bundle = R.hostingBundle
-      let name = "Main"
-      
-      static func validate() throws {
-        if UIKit.UIImage(named: "second") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'second' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "first") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'first' is used in storyboard 'Main', but couldn't be loaded.") }
-      }
       
       fileprivate init() {}
     }
