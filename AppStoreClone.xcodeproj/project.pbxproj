@@ -28,6 +28,8 @@
 		F4A9A16B2054706400FAFEEF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9A16A2054706400FAFEEF /* GameViewController.swift */; };
 		F4A9A16E2054714300FAFEEF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9A16D2054714300FAFEEF /* SearchViewController.swift */; };
 		F4A9A1702054792500FAFEEF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9A16F2054792500FAFEEF /* R.generated.swift */; };
+		F4A9A17520547B7300FAFEEF /* UpdateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9A17320547B7300FAFEEF /* UpdateCell.swift */; };
+		F4A9A17620547B7300FAFEEF /* UpdateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4A9A17420547B7300FAFEEF /* UpdateCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		F4A9A16A2054706400FAFEEF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F4A9A16D2054714300FAFEEF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F4A9A16F2054792500FAFEEF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		F4A9A17320547B7300FAFEEF /* UpdateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCell.swift; sourceTree = "<group>"; };
+		F4A9A17420547B7300FAFEEF /* UpdateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +213,18 @@
 				F42954C320432C4E0038FB0B /* AppViewController.swift */,
 				F42954C520432C4E0038FB0B /* UpdateViewController.swift */,
 				F4A9A16D2054714300FAFEEF /* SearchViewController.swift */,
+				F4A9A17720547B7B00FAFEEF /* Cell */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F4A9A17720547B7B00FAFEEF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4A9A17320547B7300FAFEEF /* UpdateCell.swift */,
+				F4A9A17420547B7300FAFEEF /* UpdateCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A9A17620547B7300FAFEEF /* UpdateCell.xib in Resources */,
 				F42954CE20432C4E0038FB0B /* LaunchScreen.storyboard in Resources */,
 				F42954CB20432C4E0038FB0B /* Assets.xcassets in Resources */,
 			);
@@ -547,6 +562,7 @@
 				F4A9A16B2054706400FAFEEF /* GameViewController.swift in Sources */,
 				F4A9A16720546D0D00FAFEEF /* TabBarController.swift in Sources */,
 				F4A9A1692054704800FAFEEF /* TodayViewController.swift in Sources */,
+				F4A9A17520547B7300FAFEEF /* UpdateCell.swift in Sources */,
 				F42954C420432C4E0038FB0B /* AppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

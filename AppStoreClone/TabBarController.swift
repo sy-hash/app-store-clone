@@ -23,19 +23,19 @@ class TabBarController: UITabBarController {
         
         view.backgroundColor = UIColor.white
 
-        let todayVC = TodayViewController()
+        let todayVC = UINavigationController(rootViewController: TodayViewController())
         todayVC.tabBarItem = UITabBarItem(title: "Today", image: R.image.tab_icon_today(), tag: 0)
         
-        let gameVC = GameViewController()
+        let gameVC = UINavigationController(rootViewController: GameViewController())
         gameVC.tabBarItem = UITabBarItem(title: "ゲーム", image: R.image.tab_icon_games(), tag: 0)
         
-        let appVC = AppViewController()
+        let appVC = UINavigationController(rootViewController: AppViewController())
         appVC.tabBarItem = UITabBarItem(title: "App", image: R.image.tab_icon_apps(), tag: 0)
         
-        let updateVC = UpdateViewController()
+        let updateVC = UINavigationController(rootViewController: UpdateViewController())
         updateVC.tabBarItem = UITabBarItem(title: "アップデート", image: R.image.tab_icon_update(), tag: 0)
         
-        let searchVC = SearchViewController()
+        let searchVC = UINavigationController(rootViewController: SearchViewController())
         searchVC.tabBarItem = UITabBarItem(title: "検索", image: R.image.tab_icon_search(), tag: 0)
         
         let viewControllers = [todayVC, gameVC, appVC, updateVC, searchVC]

@@ -31,10 +31,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 7 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
+    /// Image `app_icon_giphy`.
+    static let app_icon_giphy = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_giphy")
+    /// Image `app_icon_globo`.
+    static let app_icon_globo = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_globo")
+    /// Image `app_icon_infuse`.
+    static let app_icon_infuse = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_infuse")
+    /// Image `app_icon_mail_chimp`.
+    static let app_icon_mail_chimp = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_mail_chimp")
+    /// Image `app_icon_microsoft_lens`.
+    static let app_icon_microsoft_lens = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_microsoft_lens")
+    /// Image `app_icon_rapid_dog`.
+    static let app_icon_rapid_dog = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_rapid_dog")
+    /// Image `app_icon_spark_email`.
+    static let app_icon_spark_email = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_spark_email")
     /// Image `first`.
     static let first = Rswift.ImageResource(bundle: R.hostingBundle, name: "first")
+    /// Image `profile`.
+    static let profile = Rswift.ImageResource(bundle: R.hostingBundle, name: "profile")
     /// Image `second`.
     static let second = Rswift.ImageResource(bundle: R.hostingBundle, name: "second")
     /// Image `tab_icon_apps`.
@@ -48,9 +64,49 @@ struct R: Rswift.Validatable {
     /// Image `tab_icon_update`.
     static let tab_icon_update = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_icon_update")
     
+    /// `UIImage(named: "app_icon_giphy", bundle: ..., traitCollection: ...)`
+    static func app_icon_giphy(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_giphy, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "app_icon_globo", bundle: ..., traitCollection: ...)`
+    static func app_icon_globo(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_globo, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "app_icon_infuse", bundle: ..., traitCollection: ...)`
+    static func app_icon_infuse(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_infuse, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "app_icon_mail_chimp", bundle: ..., traitCollection: ...)`
+    static func app_icon_mail_chimp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_mail_chimp, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "app_icon_microsoft_lens", bundle: ..., traitCollection: ...)`
+    static func app_icon_microsoft_lens(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_microsoft_lens, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "app_icon_rapid_dog", bundle: ..., traitCollection: ...)`
+    static func app_icon_rapid_dog(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_rapid_dog, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "app_icon_spark_email", bundle: ..., traitCollection: ...)`
+    static func app_icon_spark_email(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_icon_spark_email, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "first", bundle: ..., traitCollection: ...)`
     static func first(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.first, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "profile", bundle: ..., traitCollection: ...)`
+    static func profile(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.profile, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "second", bundle: ..., traitCollection: ...)`
@@ -86,8 +142,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
+    /// Nib `UpdateCell`.
+    static let updateCell = _R.nib._UpdateCell()
+    
+    /// `UINib(name: "UpdateCell", in: bundle)`
+    static func updateCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.updateCell)
+    }
+    
     fileprivate init() {}
   }
   
@@ -121,7 +185,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -132,8 +196,31 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
-  struct nib {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try nib.validate()
+  }
+  
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _UpdateCell.validate()
+    }
+    
+    struct _UpdateCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "UpdateCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UpdateCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UpdateCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "app_icon_giphy", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'app_icon_giphy' is used in nib 'UpdateCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
