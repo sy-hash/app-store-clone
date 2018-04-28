@@ -10,6 +10,10 @@
 		409D5989823DA9C78B197CA9 /* Pods_AppStoreCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F63E8A117D68F0CB0189A5 /* Pods_AppStoreCloneUITests.framework */; };
 		40F5B02DC81C515FDE2FC841 /* Pods_AppStoreClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065533D0BE03B7C525F1EAEC /* Pods_AppStoreClone.framework */; };
 		9944881AE8ACE4F9928E3F73 /* Pods_AppStoreCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CDEFA2AB33B888045D2DAD /* Pods_AppStoreCloneTests.framework */; };
+		F4043753209440C1004CC170 /* TodayLargeAppCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4043751209440C1004CC170 /* TodayLargeAppCellTableViewCell.swift */; };
+		F4043754209440C1004CC170 /* TodayLargeAppCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4043752209440C1004CC170 /* TodayLargeAppCellTableViewCell.xib */; };
+		F4043756209445AE004CC170 /* TodayAppHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4043755209445AE004CC170 /* TodayAppHeaderView.swift */; };
+		F4043759209448FD004CC170 /* UIView+LayoutAnchorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4043758209448FD004CC170 /* UIView+LayoutAnchorExtension.swift */; };
 		F42954C220432C4E0038FB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42954C120432C4E0038FB0B /* AppDelegate.swift */; };
 		F42954C420432C4E0038FB0B /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42954C320432C4E0038FB0B /* AppViewController.swift */; };
 		F42954C620432C4E0038FB0B /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42954C520432C4E0038FB0B /* UpdateViewController.swift */; };
@@ -60,6 +64,10 @@
 		E5F63E8A117D68F0CB0189A5 /* Pods_AppStoreCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80B152B4C641EBB91196E0C /* Pods-AppStoreClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreClone/Pods-AppStoreClone.release.xcconfig"; sourceTree = "<group>"; };
 		EB53595D68877A0402E955CF /* Pods-AppStoreCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppStoreCloneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppStoreCloneTests/Pods-AppStoreCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		F4043751209440C1004CC170 /* TodayLargeAppCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLargeAppCellTableViewCell.swift; sourceTree = "<group>"; };
+		F4043752209440C1004CC170 /* TodayLargeAppCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayLargeAppCellTableViewCell.xib; sourceTree = "<group>"; };
+		F4043755209445AE004CC170 /* TodayAppHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAppHeaderView.swift; sourceTree = "<group>"; };
+		F4043758209448FD004CC170 /* UIView+LayoutAnchorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LayoutAnchorExtension.swift"; sourceTree = "<group>"; };
 		F42954BE20432C4E0038FB0B /* AppStoreClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F42954C120432C4E0038FB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F42954C320432C4E0038FB0B /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F4043757209448DE004CC170 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4043758209448FD004CC170 /* UIView+LayoutAnchorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F42954B520432C4E0038FB0B = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +181,7 @@
 				F42954C120432C4E0038FB0B /* AppDelegate.swift */,
 				F4A9A16420546AC300FAFEEF /* AppRootViewController.swift */,
 				F4A9A16620546D0D00FAFEEF /* TabBarController.swift */,
+				F4043757209448DE004CC170 /* Extension */,
 				F4A9A16C205470A700FAFEEF /* ViewController */,
 				F42954CA20432C4E0038FB0B /* Assets.xcassets */,
 				F42954CC20432C4E0038FB0B /* LaunchScreen.storyboard */,
@@ -223,6 +240,9 @@
 		F4A9A17720547B7B00FAFEEF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				F4043755209445AE004CC170 /* TodayAppHeaderView.swift */,
+				F4043751209440C1004CC170 /* TodayLargeAppCellTableViewCell.swift */,
+				F4043752209440C1004CC170 /* TodayLargeAppCellTableViewCell.xib */,
 				F4A9A17320547B7300FAFEEF /* UpdateCell.swift */,
 				F4A9A17420547B7300FAFEEF /* UpdateCell.xib */,
 				F4E3927C205843E100BFFAC9 /* UpdateSectionHeaderView.swift */,
@@ -351,6 +371,7 @@
 				F4A9A17620547B7300FAFEEF /* UpdateCell.xib in Resources */,
 				F42954CE20432C4E0038FB0B /* LaunchScreen.storyboard in Resources */,
 				F42954CB20432C4E0038FB0B /* Assets.xcassets in Resources */,
+				F4043754209440C1004CC170 /* TodayLargeAppCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4043756209445AE004CC170 /* TodayAppHeaderView.swift in Sources */,
 				F42954C620432C4E0038FB0B /* UpdateViewController.swift in Sources */,
 				F42954C220432C4E0038FB0B /* AppDelegate.swift in Sources */,
 				F4A9A1702054792500FAFEEF /* R.generated.swift in Sources */,
@@ -564,6 +586,8 @@
 				F4A9A16520546AC300FAFEEF /* AppRootViewController.swift in Sources */,
 				F4A9A16B2054706400FAFEEF /* GameViewController.swift in Sources */,
 				F4E3927D205843E100BFFAC9 /* UpdateSectionHeaderView.swift in Sources */,
+				F4043753209440C1004CC170 /* TodayLargeAppCellTableViewCell.swift in Sources */,
+				F4043759209448FD004CC170 /* UIView+LayoutAnchorExtension.swift in Sources */,
 				F4A9A16720546D0D00FAFEEF /* TabBarController.swift in Sources */,
 				F4A9A1692054704800FAFEEF /* TodayViewController.swift in Sources */,
 				F4A9A17520547B7300FAFEEF /* UpdateCell.swift in Sources */,
@@ -662,7 +686,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -713,7 +737,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 16 images.
   struct image {
     /// Image `app_icon_giphy`.
     static let app_icon_giphy = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_giphy")
@@ -47,6 +47,8 @@ struct R: Rswift.Validatable {
     static let app_icon_rapid_dog = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_rapid_dog")
     /// Image `app_icon_spark_email`.
     static let app_icon_spark_email = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_icon_spark_email")
+    /// Image `app_promo_image_large`.
+    static let app_promo_image_large = Rswift.ImageResource(bundle: R.hostingBundle, name: "app_promo_image_large")
     /// Image `first`.
     static let first = Rswift.ImageResource(bundle: R.hostingBundle, name: "first")
     /// Image `profile`.
@@ -99,6 +101,11 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.app_icon_spark_email, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "app_promo_image_large", bundle: ..., traitCollection: ...)`
+    static func app_promo_image_large(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.app_promo_image_large, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "first", bundle: ..., traitCollection: ...)`
     static func first(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.first, compatibleWith: traitCollection)
@@ -142,10 +149,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
+    /// Nib `TodayLargeAppCellTableViewCell`.
+    static let todayLargeAppCellTableViewCell = _R.nib._TodayLargeAppCellTableViewCell()
     /// Nib `UpdateCell`.
     static let updateCell = _R.nib._UpdateCell()
+    
+    /// `UINib(name: "TodayLargeAppCellTableViewCell", in: bundle)`
+    static func todayLargeAppCellTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.todayLargeAppCellTableViewCell)
+    }
     
     /// `UINib(name: "UpdateCell", in: bundle)`
     static func updateCell(_: Void = ()) -> UIKit.UINib {
@@ -203,7 +217,23 @@ struct _R: Rswift.Validatable {
   
   struct nib: Rswift.Validatable {
     static func validate() throws {
+      try _TodayLargeAppCellTableViewCell.validate()
       try _UpdateCell.validate()
+    }
+    
+    struct _TodayLargeAppCellTableViewCell: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "TodayLargeAppCellTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> TodayLargeAppCellTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TodayLargeAppCellTableViewCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "app_promo_image_large", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'app_promo_image_large' is used in nib 'TodayLargeAppCellTableViewCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
     }
     
     struct _UpdateCell: Rswift.NibResourceType, Rswift.Validatable {
